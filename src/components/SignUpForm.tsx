@@ -1,7 +1,25 @@
-import React, { useReducer, useRef } from "react";
+import { useReducer, useRef } from "react";
 import axios from "axios";
 
-const InitialState = {
+import { age } from "../helpers";
+
+type FormState = {
+  username: string;
+  birthday: string;
+  gender: "Z" | "M";
+  email: string;
+  password: string;
+};
+
+type Action =
+  | { type: "saveName"; payload: string }
+  | { type: "saveBirthday"; payload: string }
+  | { type: "saveGender"; payload: "Z" | "M" }
+  | { type: "saveEmail"; payload: string }
+  | { type: "savePassword"; payload: string }
+  | { type: "reset" };
+
+const InitialState: FormState = {
   username: "",
   birthday: "",
   gender: "Z",
@@ -9,61 +27,35 @@ const InitialState = {
   password: "",
 };
 
-function reducer(state, action) {
+function reducer(state: FormState, action: Action): FormState {
   switch (action.type) {
     case "saveName":
-      return {
-        ...state,
-        username: action.payload,
-      };
+      return { ...state, username: action.payload };
     case "saveBirthday":
-      return {
-        ...state,
-        birthday: action.payload,
-      };
+      return { ...state, birthday: action.payload };
     case "saveGender":
-      return {
-        ...state,
-        gender: action.payload,
-      };
+      return { ...state, gender: action.payload };
     case "saveEmail":
-      return {
-        ...state,
-        email: action.payload,
-      };
+      return { ...state, email: action.payload };
     case "savePassword":
-      return {
-        ...state,
-        password: action.payload,
-      };
-    case "reset": {
+      return { ...state, password: action.payload };
+    case "reset":
       return InitialState;
-    }
     default:
       return state;
   }
 }
 
-const starost = function (birthday) {
-  const datum = new Date();
-  const rodjendan = new Date(birthday);
-  const godine = datum.getFullYear() - rodjendan.getFullYear();
-  const mjeseci = datum.getMonth() - rodjendan.getMonth();
-  if (mjeseci < 0 || (mjeseci === 0 && datum.getDate() < rodjendan.getDate()))
-    return godine - 1;
-  return godine;
-};
-
 function Form() {
   const [state, dispatch] = useReducer(reducer, InitialState);
 
-  const inputs = useRef([]);
+  const inputs = useRef<NodeListOf<HTMLInputElement> | null>(null);
   inputs.current = document.querySelectorAll("input");
 
-  const handleSubmit = async function (e) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const godine = starost(state.birthday);
+    const godine = age(new Date(state.birthday));
     if (godine < 18) {
       alert("Morate biti stariji od 18 godina da biste se registrovali. 😁");
       return;
@@ -82,11 +74,11 @@ function Form() {
           "Čestitamo! Uspješno ste otvorili vaš račun. Sada se prijavite u aplikaciju i transferujte vaš novac bilo gdje! 🌍"
         );
 
-      inputs.current.forEach((input) => (input.value = ""));
-    } catch (err) {
+      inputs.current?.forEach((input) => (input.value = ""));
+    } catch (err: unknown) {
       console.error(err);
-      alert(err);
-      inputs.current.forEach((input) => (input.value = ""));
+      alert(err instanceof Error ? err.message : "Greška!");
+      inputs.current?.forEach((input) => (input.value = ""));
     }
   };
 
@@ -105,6 +97,7 @@ function Form() {
           required
         />
       </div>
+
       <div className="flex-column">
         <label htmlFor="rodjendan">Datum rodjenja</label>
         <input
@@ -117,13 +110,17 @@ function Form() {
           required
         />
       </div>
+
       <div className="flex-column">
         <label htmlFor="pol">Pol</label>
         <select
           id="pol"
           autoComplete="sex"
           onChange={(e) =>
-            dispatch({ type: "saveGender", payload: e.target.value })
+            dispatch({
+              type: "saveGender",
+              payload: e.target.value as "Z" | "M",
+            })
           }
           required
         >
@@ -131,6 +128,7 @@ function Form() {
           <option value="M">Muško</option>
         </select>
       </div>
+
       <div className="flex-column">
         <label htmlFor="e-mail">E-mail adresa</label>
         <input
@@ -144,6 +142,7 @@ function Form() {
           required
         />
       </div>
+
       <div className="flex-column">
         <label htmlFor="sifra">Šifra</label>
         <input
@@ -158,36 +157,10 @@ function Form() {
           required
         />
       </div>
+
       <button className="btn btn-form btn-sign-up">Napravi nalog</button>
     </form>
   );
 }
 
-export default function SignUp() {
-  return (
-    <section className="sign-up-section flex-column" id="otvori-nalog">
-      <div className="heading-wrapper">
-        <h6 className="heading-secondary">Napravi nalog</h6>
-        <h1 className="heading-primary">
-          Postani naš član još danas i iskoristi pogodnosti koje nudimo.
-        </h1>
-      </div>
-      <div className="sign-up-container">
-        <div className="sign-up-text-box flex-column">
-          <h2 className="sign-up-heading">Besplatno se učlani!</h2>
-          <p className="sign-up-description">
-            Dozvoljeno starijima od 18 godina. Šalji novac prijateljima, uzimaj
-            pozajmice bilo kad i bilo gdje uz<strong> kamatnu stopu </strong> od
-            samo <strong>5%</strong>.
-          </p>
-          <Form />
-        </div>
-        <div
-          className="sign-up-img"
-          role="img"
-          aria-label="Zadovoljna korisnica Bankar aplikacije"
-        ></div>
-      </div>
-    </section>
-  );
-}
+export default Form;

@@ -1,4 +1,4 @@
-function HomePage({ children }) {
+function HomePage({ children }: { children: React.ReactNode }) {
   return <div className="container">{children}</div>;
 }
 

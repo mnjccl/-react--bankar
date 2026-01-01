@@ -1,11 +1,12 @@
-import React from "react";
 import { useState } from "react";
+
 import AccountInfo from "./AccountInfo";
 import AccountActions from "./AccountActions";
 import AccountReports from "./AccountReports";
+import { BankarProps, Transaction } from "../types";
 
-function Bankar({ user, resetStates }) {
-  const [transactions, setTransactions] = useState([]);
+function Bankar({ user, resetStates }: BankarProps) {
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [balance, setBalance] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
 

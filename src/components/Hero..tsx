@@ -1,5 +1,4 @@
-import React from "react";
-import logo from "./imgs/logo.png";
+import Header from "./Header";
 import hero from "./imgs/hero-img.png";
 import korisnik1 from "./imgs/korisnici/korisnik-1.jpg";
 import korisnik2 from "./imgs/korisnici/korisnik-2.jpg";
@@ -7,10 +6,14 @@ import korisnik3 from "./imgs/korisnici/korisnik-3.jpg";
 import korisnik4 from "./imgs/korisnici/korisnik-4.jpg";
 import korisnik5 from "./imgs/korisnici/korisnik-5.jpg";
 
-export default function Hero(props) {
+export default function Hero({
+  setIsOpenOverlay,
+}: {
+  setIsOpenOverlay: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
     <>
-      <Header setIsOpenOverlay={props.setIsOpenOverlay} />
+      <Header setIsOpenOverlay={setIsOpenOverlay} />
       <section className="hero-section">
         <div className="hero-wrapper hero-left-wrapper">
           <div className="hero-content">
@@ -49,43 +52,5 @@ export default function Hero(props) {
         </div>
       </section>
     </>
-  );
-}
-
-function Header({ setIsOpenOverlay }) {
-  return (
-    <header className="header">
-      <div className="banner">
-        <img src={logo} alt="Logo kompanije Bankar" className="banner-logo" />
-        <h1 className="banner-text">Bankar</h1>
-      </div>
-      <nav className="nav">
-        <ul className="nav-list">
-          <li>
-            <a href="#o-nama" className="nav-link">
-              O nama
-            </a>
-          </li>
-          <li>
-            <a href="#features" className="nav-link">
-              Funkcionalnosti
-            </a>
-          </li>
-          <li>
-            <a href="#otvori-nalog" className="nav-link">
-              Otvori nalog
-            </a>
-          </li>
-          <li>
-            <button
-              className="btn nav-link-btn"
-              onClick={() => setIsOpenOverlay(true)}
-            >
-              Uloguj se
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
   );
 }

@@ -1,11 +1,14 @@
-import React from "react";
 import instagram from "./imgs/drustvene-mreze/logo-instagram.png";
 import facebook from "./imgs/drustvene-mreze/logo-facebook.png";
 import twitter from "./imgs/drustvene-mreze/logo-twitter.png";
 import linkedin from "./imgs/drustvene-mreze/logo-linkedin.png";
 import logo from "./imgs/logo.png";
 
-export default function Footer({ setIsOpenOverlay }) {
+export default function Footer({
+  setIsOpenOverlay,
+}: {
+  setIsOpenOverlay: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
     <footer className="footer" id="footer">
       <div className="footer-container">
