@@ -1,0 +1,48 @@
+.features-section {
+  padding: 6.4rem 8rem;
+  background-color: var(--font);
+  color: var(--plava-tamnija-pozadina);
+}
+
+.features {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 9.6rem 0 1.6rem;
+}
+
+.feature {
+  background-color: var(--narandzasta-input-select);
+  color: var(--font-form);
+  border-radius: 0 60px;
+  width: 25%;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  transition: all 0.7s;
+  filter: blur(5px);
+  cursor: pointer;
+}
+
+.feature:hover {
+  filter: blur(0px);
+  transform: scale(1.05);
+}
+
+.feature ion-icon {
+  font-size: 4rem;
+  color: var(--font);
+  background-color: var(--narandzasta-btn);
+  padding: 0.8rem;
+  border-radius: 100px;
+  align-self: center;
+}
+
+.feature-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.feature-text {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}

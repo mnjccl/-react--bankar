@@ -1,0 +1,81 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5.8rem 0 20rem 0;
+}
+
+.hero-wrapper {
+  padding: 0 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  line-height: 1.1;
+  align-self: end;
+  letter-spacing: 0.1rem;
+}
+
+.hero-content .hero-btns {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.hero-img {
+  height: 40rem;
+}
+
+.hero-img:hover {
+  transform: skew(-10deg, -10deg) rotate(5deg);
+  transition: all 1s;
+}
+
+.hero-img:not(:hover) {
+  transform: skew(0deg, 0deg) rotate(0deg);
+  transition: all 1s ease-in-out;
+}
+
+.korisnici-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2;
+  margin-top: 8rem;
+  gap: 1.6rem;
+}
+
+.korisnici {
+  display: flex;
+}
+
+.korisnici img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.2rem;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+}
+
+.korisnici img:last-child {
+  margin: 0;
+}
+
+.korisnici-wrapper p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.korisnici-wrapper p strong {
+  color: var(--plava-sekundarni-naslov);
+}

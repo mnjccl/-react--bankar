@@ -1,0 +1,29 @@
+.footer {
+  padding: 8rem;
+}
+
+.footer-container {
+  padding: 2.4rem 9.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+.footer-container .flex-column {
+  gap: 6.4rem;
+}
+
+.btn-footer-wrapper {
+  align-self: center;
+}
+
+.footer-socials {
+  align-self: center;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.footer-logo {
+  width: 5rem;
+  cursor: pointer;
+}

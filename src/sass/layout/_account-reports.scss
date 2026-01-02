@@ -1,0 +1,40 @@
+.account-reports {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  display: flex;
+  padding: 2.4rem;
+}
+
+.reports {
+  margin: auto;
+  width: 38rem;
+  height: 40rem;
+  overflow: auto;
+}
+
+.report {
+  padding: 1.6rem;
+  border: 1px solid var(--font);
+  border-radius: 10rem;
+  margin: 0.4rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.report-type {
+  padding: 0.4rem;
+  border-radius: 10rem;
+}
+
+.report-type-isplaceno {
+  background-color: var(--crvena);
+}
+
+.report-type-uplaceno {
+  background-color: var(--zelena);
+}
+
+.report-amount {
+  font-size: 1.8rem;
+}

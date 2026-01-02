@@ -1,5 +1,6 @@
-import "./App.css";
 import { useEffect, useState } from "react";
+
+import { User } from "./types";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Features from "./components/Features";
@@ -10,10 +11,11 @@ import LogIn from "./components/LogIn";
 import BtnLogOut from "./components/BtnLogOut";
 import HomePage from "./components/HomePage";
 import Bankar from "./components/Bankar";
+import "./sass/main.scss";
 
 export default function App() {
   const [isOpenOverlay, setIsOpenOverlay] = useState(false);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 
   const resetStates = function () {
     setIsOpenOverlay(false);

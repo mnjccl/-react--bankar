@@ -1,0 +1,122 @@
+.about-section {
+  background-color: var(--font);
+  color: var(--plava-tamnija-pozadina);
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 1fr 5fr;
+  gap: 9.8rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.card {
+  width: 44rem;
+  height: 30rem;
+  color: var(--font);
+  border-radius: 0 60px;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  transform: translateX(-150%);
+}
+
+.card:nth-of-type(even) {
+  transform: translateX(150%);
+}
+
+.card.show {
+  transform: translateX(0%);
+}
+
+.card:hover > .card-description {
+  transform: translateY(0);
+}
+
+.card-description {
+  padding: 3.2rem;
+  gap: 1.6rem;
+
+  transition: all 0.7s ease-out;
+}
+
+.card-heading {
+  font-size: 3rem;
+  color: var(--narandzasta-input-select);
+}
+
+.card-text {
+  font-size: 2rem;
+  line-height: 1.2;
+  width: 80%;
+  letter-spacing: 0.1rem;
+}
+
+.card-link,
+.card-link:link,
+.card-link:visited {
+  align-self: start;
+  color: var(--narandzasta-input-select);
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.card-link,
+.card-link:hover,
+.card-link:active {
+  color: var(--font);
+}
+
+.digital-bank-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 15, 0.7),
+      rgba(142, 202, 230, 0.7)
+    ),
+    url("components/imgs/digital-bank.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.security-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 15, 0.7),
+      rgba(142, 202, 230, 0.7)
+    ),
+    url("components/imgs/security.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.debit-card-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 15, 0.7),
+      rgba(142, 202, 230, 0.7)
+    ),
+    url("components/imgs/debit-card.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.e-mail-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 15, 0.7),
+      rgba(142, 202, 230, 0.7)
+    ),
+    url("components/imgs/e-mail.jpg");
+  background-size: cover;
+  background-position: center;
+}
