@@ -6,13 +6,13 @@ export default function Report({ transaction }: { transaction: Transaction }) {
   return (
     <div className="report">
       <span
-        className={`report-type ${
-          positiveTransaction ? "report-type-uplaceno" : "report-type-isplaceno"
+        className={`report--type ${
+          positiveTransaction ? "report--type-in" : "report--type-out"
         }`}
       >
         {positiveTransaction ? "Uplaceno" : "Isplaceno"}
       </span>
-      <span className="report-amount">{transactionAmount} RSD</span>
+      <span className="report--amount">{transactionAmount} RSD</span>
     </div>
   );
 }

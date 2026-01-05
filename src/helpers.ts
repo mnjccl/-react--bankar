@@ -21,3 +21,12 @@ export function Now(time: MutableRefObject<string>) {
 
   time.current = `${day}/${month}/${year}, ${hour}:${min}`;
 }
+
+export function clientName(fullName: string) {
+  const words = fullName.split(" ");
+  if (words.length > 0) {
+    return words[0];
+  } else {
+    return fullName;
+  }
+}

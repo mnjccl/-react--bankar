@@ -53,7 +53,7 @@ export default function DeleteAccount({
 
   return (
     <>
-      <h3 className="action-heading">Obriši nalog</h3>
+      <h3 className="heading--action">Obriši nalog</h3>
       <form className="action-form flex-column" onSubmit={handleSubmit}>
         <div className="flex-column">
           <label htmlFor="lozinka">Lozinka</label>
@@ -64,7 +64,7 @@ export default function DeleteAccount({
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-action">
+        <button type="submit" className="btn btn--action">
           Potvrdi
         </button>
       </form>

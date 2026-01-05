@@ -48,18 +48,18 @@ export default function TakeLoan({
 
   return (
     <>
-      <h3 className="action-heading">Digni pozajmicu</h3>
+      <h3 className="heading--action">Digni pozajmicu</h3>
       <form className="action-form flex-column" onSubmit={handleSubmit}>
         <div className="flex-column">
-          <label htmlFor="iznos">Iznos</label>
+          <label htmlFor="amount">Iznos</label>
           <input
-            id="iznos"
+            id="amount"
             type="number"
             ref={input}
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit" className="btn btn-action">
+        <button type="submit" className="btn btn--action">
           Podigni
         </button>
       </form>

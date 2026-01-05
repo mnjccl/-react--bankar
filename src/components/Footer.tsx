@@ -11,59 +11,67 @@ export default function Footer({
 }) {
   return (
     <footer className="footer" id="footer">
-      <div className="footer-container">
+      <div className="footer--container">
         <div className="flex-column">
-          <h2 className="footer-heading">
+          <h2 className="heading--footer">
             Olakšajte sebi svakodnevnicu. Najbolji trenutak za pridruživanje
             našoj porodici je upravo sada.
           </h2>
-          <div className="btn-footer-wrapper">
+          <div className="footer--btn-wrapper">
             <a href="#otvori-nalog">
-              <button className="btn btn-footer">Učlani se besplatno</button>
+              <button className="btn btn--footer">Učlani se besplatno</button>
             </a>
           </div>
         </div>
 
         <div className="flex-column" id="kontaktirajte-nas">
-          <div className="footer-socials">
-            <div className="socials-wrapper">
+          <div className="footer--socials">
+            <div>
               <img
                 src={instagram}
                 alt="Instagram logo"
-                className="footer-logo"
+                className="footer--logo"
               />
             </div>
-            <div className="socials-wrapper">
-              <img src={facebook} alt="Facebook logo" className="footer-logo" />
+            <div>
+              <img
+                src={facebook}
+                alt="Facebook logo"
+                className="footer--logo"
+              />
             </div>
-            <div className="socials-wrapper">
-              <img src={twitter} alt="Twitter logo" className="footer-logo" />
+            <div>
+              <img src={twitter} alt="Twitter logo" className="footer--logo" />
             </div>
-            <div className="socials-wrapper">
-              <img src={linkedin} alt="LinkedIn logo" className="footer-logo" />
+            <div>
+              <img
+                src={linkedin}
+                alt="LinkedIn logo"
+                className="footer--logo"
+              />
             </div>
           </div>
 
-          <nav className="nav-footer">
-            <ul className="nav-links-footer">
+          <nav className="footer--nav">
+            <ul className="footer--nav-list">
               <li>
-                <a href="#o-nama" className="nav-link-footer">
+                <a href="#o-nama" className="footer--nav-link">
                   O nama
                 </a>
               </li>
               <li>
-                <a href="#features" className="nav-link-footer">
+                <a href="#features" className="footer--nav-link">
                   Funkcionalnosti
                 </a>
               </li>
               <li>
-                <a href="#otvori-nalog" className="nav-link-footer">
+                <a href="#otvori-nalog" className="footer--nav-link">
                   Otvori nalog
                 </a>
               </li>
               <li>
                 <span
-                  className="nav-link-footer"
+                  className="footer--nav-link"
                   onClick={() => setIsOpenOverlay(true)}
                 >
                   Uloguj se
@@ -77,7 +85,7 @@ export default function Footer({
           <img
             src={logo}
             alt="Logo Bankar komanije"
-            className="banner-logo"
+            className="banner--logo"
             onClick={() => window.scrollTo(0, 0)}
           />
         </div>

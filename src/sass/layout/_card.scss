@@ -1,0 +1,76 @@
+.card {
+  width: 44rem;
+  height: 30rem;
+  color: $font;
+  border-radius: 0 60px;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  transform: translateX(-150%);
+
+  &:nth-of-type(even) {
+    transform: translateX(150%);
+  }
+
+  &.show {
+    transform: translateX(0%);
+  }
+
+  &--description {
+    padding: 3.2rem;
+    gap: 1.6rem;
+    transition: all 0.7s ease-out;
+  }
+
+  &:hover {
+    > .card--description {
+      transform: translateY(0);
+    }
+  }
+
+  &-link,
+  &-link:link,
+  &-link:visited {
+    align-self: start;
+    color: $form-input-select;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: all 0.7s;
+    cursor: pointer;
+  }
+
+  &-link,
+  &-link:hover,
+  &-link:active {
+    color: $font;
+  }
+}
+
+// CARD BACKGROUNDS
+
+%card-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.digital-bank-img {
+  @extend %card-bg;
+  background-image: $card-gradient url("components/imgs/digital-bank.jpg");
+}
+
+.security-img {
+  @extend %card-bg;
+  background-image: $card-gradient, url("components/imgs/security.jpg");
+}
+
+.debit-card-img {
+  @extend %card-bg;
+  background-image: $card-gradient, url("components/imgs/debit-card.jpg");
+}
+
+.e-mail-img {
+  @extend %card-bg;
+  background-image: $card-gradient, url("components/imgs/e-mail.jpg");
+}

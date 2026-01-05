@@ -16,14 +16,24 @@
 
 $font: #eef4ed;
 $font-darker: #a7aba6;
-$font-form: #4b2800;
-$blue-heading: rgb(142, 202, 230);
+
+$blue-primary: rgb(142, 202, 230);
+$blue-secondary: #219ebc;
 $blue-darker-background: #00000f;
 $blue-lighter-background: #29294a;
-$orange-btn: #fb8500;
-$orange-input-select: #fdb666;
+
+$btn-primary: #fb8500;
+
+$form-font: #4b2800;
+$form-input-select: #fdb666;
 $form-btn: #7f5b33;
+
 $green: #39b385;
 $red: #e52a5a;
-$blue-secondary: #219ebc;
 $yellow: #ffb703;
+
+$card-gradient: linear-gradient(
+  to right bottom,
+  rgba(0, 0, 15, 0.7),
+  rgba(142, 202, 230, 0.7)
+);

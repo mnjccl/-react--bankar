@@ -1,41 +1,36 @@
 .account-info {
   justify-content: space-between;
   text-shadow: -5px 0px 50px rgba(0, 0, 0, 1);
-}
 
-.info {
-  gap: 1.2rem;
-  display: flex;
-}
+  .balance {
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: space-between;
 
-.balance-p {
-  font-size: 2.8rem;
-  display: flex;
-  justify-content: space-between;
-}
+    &--amount {
+      color: $blue-secondary;
+    }
+  }
 
-.balance {
-  color: var(--plava-sekundarna);
-}
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
 
-.summary {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.8rem;
-}
+    p strong {
+      font-size: 2rem;
+    }
 
-.summary p strong {
-  font-size: 2rem;
-}
+    &--money-out {
+      color: $red;
+    }
 
-.summary-red {
-  color: var(--crvena);
-}
+    &--money-in {
+      color: $green;
+    }
 
-.summary-green {
-  color: var(--zelena);
-}
-
-.summary-yellow {
-  color: var(--zuta);
+    &--interest-rate {
+      color: $yellow;
+    }
+  }
 }

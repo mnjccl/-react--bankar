@@ -2,55 +2,36 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
 
-.actions {
-  gap: 2.4rem;
-}
+  .actions {
+    gap: 2.4rem;
 
-.actions ion-icon {
-  cursor: pointer;
-  font-size: 4.4rem;
-}
+    &--icon {
+      cursor: pointer;
+      font-size: 4.4rem;
+    }
+  }
 
-.action-display {
-  gap: 2.4rem;
-}
+  .action-display {
+    gap: 2.4rem;
 
-.action-heading {
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-}
+    .action-form {
+      gap: 1.6rem;
+      color: $font;
 
-.action-form {
-  gap: 1.6rem;
-  color: var(--font);
-}
+      div label {
+        padding-bottom: 0.5rem;
+        font-size: 1.4rem;
+      }
 
-.action-form div label {
-  padding-bottom: 0.5rem;
-  font-size: 1.4rem;
-}
-
-.action-form div input {
-  padding: 0.4rem;
-  border: 0.1rem solid var(--font);
-  background-color: transparent;
-  border-radius: 0 1rem;
-  color: var(--font);
-  font-size: 1.6rem;
-}
-
-.btn-action,
-.btn-action:link,
-.btn-action:visited {
-  border-radius: 0 1rem;
-  padding: 0.4rem 0;
-  border: 0.1rem solid var(--font);
-}
-
-.btn-action:hover,
-.btn:active {
-  background-color: transparent;
-  color: var(--font);
+      div input {
+        padding: 0.4rem;
+        border: 0.1rem solid $font-darker;
+        background-color: transparent;
+        border-radius: 0 1rem;
+        color: $font;
+        font-size: 1.6rem;
+      }
+    }
+  }
 }

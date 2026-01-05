@@ -83,7 +83,7 @@ function Form() {
   };
 
   return (
-    <form className="sign-up-form" onSubmit={handleSubmit}>
+    <form className="sign-up--form" onSubmit={handleSubmit}>
       <div className="flex-column">
         <label htmlFor="ime">Ime i prezime</label>
         <input
@@ -158,7 +158,7 @@ function Form() {
         />
       </div>
 
-      <button className="btn btn-form btn-sign-up">Napravi nalog</button>
+      <button className="btn btn--form btn--sign-up">Napravi nalog</button>
     </form>
   );
 }

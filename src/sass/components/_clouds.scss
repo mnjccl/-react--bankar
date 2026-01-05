@@ -2,43 +2,33 @@
   position: relative;
 }
 
-.custom-shape-divider-bottom-1702907395 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
+.custom-shape-divider {
+  &-bottom-1702907395,
+  &-top-1702907219 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 
-.custom-shape-divider-bottom-1702907395 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 100px;
-}
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 100px;
+    }
 
-.custom-shape-divider-bottom-1702907395 .shape-fill {
-  fill: var(--font);
-}
+    .shape-fill {
+      fill: var(--font);
+    }
+  }
 
-.custom-shape-divider-top-1702907219 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
+  &-bottom-1702907395 {
+    transform: rotate(180deg);
+    bottom: 0;
+  }
 
-.custom-shape-divider-top-1702907219 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 100px;
-}
-
-.custom-shape-divider-top-1702907219 .shape-fill {
-  fill: var(--font);
+  &-top-1702907219 {
+    top: 0;
+  }
 }

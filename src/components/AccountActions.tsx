@@ -25,9 +25,21 @@ function AccountActions({
   return (
     <div className="account-actions">
       <div className="actions flex-column">
-        <IonIcon icon={sendOutline} onClick={() => setActive(1)} />
-        <IonIcon icon={cloudDownloadOutline} onClick={() => setActive(2)} />
-        <IonIcon icon={personRemoveOutline} onClick={() => setActive(3)} />
+        <IonIcon
+          icon={sendOutline}
+          className="actions--icon"
+          onClick={() => setActive(1)}
+        />
+        <IonIcon
+          icon={cloudDownloadOutline}
+          className="actions--icon"
+          onClick={() => setActive(2)}
+        />
+        <IonIcon
+          icon={personRemoveOutline}
+          className="actions--icon"
+          onClick={() => setActive(3)}
+        />
       </div>
       <div className="action-display flex-column">
         {active === 1 && (

@@ -1,12 +1,15 @@
 // THIS REMOVE ARROWS FROM NUMBER INPUTS
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  appearance: textfield;
-  -moz-appearance: textfield;
+input {
+  // Chrome, Edge, Safari
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  // Firefox
+  &[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
 }

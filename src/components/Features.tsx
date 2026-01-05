@@ -24,8 +24,8 @@ export default function Features() {
     <>
       <section className="features-section" id="features">
         <div className="heading-wrapper">
-          <h6 className="heading-secondary">Funkcionalnosti</h6>
-          <h1 className="heading-primary">
+          <h6 className="heading--secondary">Funkcionalnosti</h6>
+          <h1 className="heading--primary">
             Posjeduj sve što nude najsavremenije banke potpuno besplatno.
           </h1>
         </div>

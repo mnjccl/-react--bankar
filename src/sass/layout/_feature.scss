@@ -1,0 +1,25 @@
+.feature {
+  background-color: $form-input-select;
+  color: $form-font;
+  border-radius: 0 60px;
+  width: 25%;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  transition: all 0.7s;
+  filter: blur(5px);
+  cursor: pointer;
+
+  &:hover {
+    filter: blur(0px);
+    transform: scale(1.05);
+  }
+
+  &--icon {
+    font-size: 4rem;
+    color: $font;
+    background-color: $btn-primary;
+    padding: 0.8rem;
+    border-radius: 100px;
+    align-self: center;
+  }
+}

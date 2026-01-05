@@ -47,11 +47,11 @@ export default function LogIn({ setUser }: LogInProps) {
   };
 
   return (
-    <div className="log-in-wrapper form-style flex-column">
+    <div className="log-in flex-column">
       <div className="banner">
-        <img src={logo} alt="Logo kompanije Bankar" className="banner-logo" />
+        <img src={logo} alt="Logo kompanije Bankar" className="banner--logo" />
       </div>
-      <form className="log-in-form" onSubmit={handleSubmit}>
+      <form className="log-in--form" onSubmit={handleSubmit}>
         <div className="flex-column">
           <label htmlFor="email">E-mail</label>
           <input
@@ -72,7 +72,7 @@ export default function LogIn({ setUser }: LogInProps) {
             onChange={(e) => setInputPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-form btn-log-in">
+        <button type="submit" className="btn btn--form btn--log-in">
           Uloguj se
         </button>
       </form>

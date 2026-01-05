@@ -1,4 +1,4 @@
-.log-in-wrapper {
+.log-in {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8,47 +8,49 @@
   display: flex;
   gap: 3.8rem;
   background-image: linear-gradient(to right bottom, #fc9d33, #fb8500);
-  color: var(--font-form);
+  color: $form-font;
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.64);
   border-radius: 0 80px;
+
+  &--form {
+    padding: 1.8rem;
+    display: grid;
+    gap: 1.2rem;
+
+    .flex-column *:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.4rem rgba(226, 120, 0, 0.5);
+      border-radius: 0 20px 0 20px;
+    }
+
+    .flex-column label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .flex-column input {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 0 20px;
+      border: none;
+      font-family: inherit;
+      color: inherit;
+      font-size: 1.6rem;
+      background-color: $form-input-select;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .banner {
+    align-self: center;
+  }
 }
 
-.log-in-form {
-  padding: 1.8rem;
-  display: grid;
-  gap: 1.2rem;
-}
-
-.log-in-wrapper .banner {
-  align-self: center;
-}
-
-.log-in-form .flex-column *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.4rem rgba(226, 120, 0, 0.5);
-  border-radius: 0 20px 0 20px;
-}
-
-.log-in-form .flex-column label {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-bottom: 0.6rem;
-}
-
-.log-in-form .flex-column input {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 0 20px;
-  border: none;
-  font-family: inherit;
-  color: inherit;
-  font-size: 1.6rem;
-  background-color: var(--narandzasta-input-select);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-}
+/*
 
 .log-in-text {
   align-self: center;
@@ -67,3 +69,5 @@
 .log-in-text a:active {
   background-color: var(--font);
 }
+  
+*/

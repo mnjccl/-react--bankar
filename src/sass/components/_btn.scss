@@ -1,5 +1,6 @@
 .btn {
   display: inline-block;
+  font-size: 1.8rem;
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
@@ -10,141 +11,170 @@
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
-}
 
-.nav-link-btn,
-.nav-link-btn:link,
-.nav-link-btn:visited {
-  background-color: var(--narandzasta-btn);
-  color: var(--font);
-  font-size: 1.8rem;
-  padding: 0.6rem 1rem;
-  border-radius: 0 10px 0 10px;
-  transition: all 0.7s;
-  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
-}
+  &,
+  &:link,
+  &:visited {
+    color: inherit;
+  }
 
-.nav-link-btn:hover,
-.nav-link-btn:active {
-  background-color: var(--font);
-  color: var(--narandzasta-btn);
-  transform: scale(1.01);
+  // NAV BUTTON
+  &--nav-link {
+    &,
+    &:link,
+    &:visited {
+      background-color: $btn-primary;
+      color: $font;
+      padding: 0.6rem 1rem;
+      border-radius: 0 10px 0 10px;
+    }
+    &:hover,
+    &:active {
+      background-color: $font;
+      color: $btn-primary;
+      transform: scale(1.01);
+    }
+  }
+
+  // HERO BUTTONS
+  &--start {
+    &,
+    &:link,
+    &:visited {
+      background-color: $btn-primary;
+      color: $font;
+    }
+    &:hover,
+    &:active {
+      background-color: $font;
+      color: $btn-primary;
+      transform: scale(1.01);
+    }
+  }
+
+  &--learn-more {
+    &,
+    &:link,
+    &:visited {
+      background-color: $font;
+      color: $btn-primary;
+    }
+    &:hover,
+    &:active {
+      background-color: $btn-primary;
+      color: $font;
+      transform: scale(1.01);
+    }
+  }
+
+  // FORM BUTTON
+  &--form {
+    &,
+    &:link,
+    &:visited {
+      background-color: $form-btn;
+      color: $font;
+      border-radius: 0 20px 0 20px;
+      padding: 0.6rem;
+      margin-top: 1.4rem;
+      align-self: end;
+      transition: all 0.7s;
+      font-size: 1.6rem;
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+    }
+    &:hover,
+    &:active {
+      background-color: $form-input-select;
+      color: $form-font;
+    }
+  }
+
+  // FOOTER BUTTON
+  &--footer {
+    &,
+    &:link,
+    &:visited {
+      color: $font;
+      background-color: $btn-primary;
+      padding: 2rem;
+      font-size: 3rem;
+      transition: all 1s;
+      border-radius: 0 25px 0 25px;
+    }
+    &:hover,
+    &:active {
+      background-color: $font;
+      color: $btn-primary;
+      transform: scale(1.01);
+    }
+  }
+
+  // CLOSE BUTTON
+
+  &--close {
+    &,
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 1rem;
+      right: 4.2rem;
+      font-size: 7rem;
+      color: $font;
+      border: none;
+      background: none;
+    }
+    &:hover,
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+
+  // ACTION BUTTONS IN APP
+  &--action {
+    &,
+    &:link,
+    &:visited {
+      padding: 0.4rem 0;
+      border-radius: 0 1rem;
+      border: 0.1rem solid $font;
+    }
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $font;
+    }
+  }
+
+  // LOG OUT FROM ACCOUNT
+  &--log-out {
+    &,
+    &:link,
+    &:visited {
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      display: block;
+      padding: 1.2rem;
+      border-radius: 0 20px;
+      background-color: $btn-primary;
+      color: $font;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $font;
+      color: $btn-primary;
+    }
+  }
 }
 
 .hero-btns .btn {
   padding: 1.2rem 1.8rem;
-  font-size: 1.8rem;
   border-radius: 0 25px 0 25px;
   align-self: flex-start;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75) inset;
-}
-
-.btn-start,
-.btn-start:link,
-.btn-start:visited {
-  background-color: var(--narandzasta-btn);
-  color: var(--font);
-}
-
-.btn-start:hover,
-.btn-start:active {
-  background-color: var(--font);
-  color: var(--narandzasta-btn);
-  transform: scale(1.01);
-}
-
-.btn-learn-more,
-.btn-learn-more:link,
-.btn-learn-more:visited {
-  background-color: var(--font);
-  color: var(--narandzasta-btn);
-}
-
-.btn-learn-more:hover,
-.btn-learn-more:active {
-  background-color: var(--narandzasta-btn);
-  color: var(--font);
-  transform: scale(1.01);
-}
-
-.btn-form,
-.btn-form:link,
-.btn-form:visited {
-  background-color: var(--form-btn);
-  color: var(--font);
-  border-radius: 0 20px 0 20px;
-  padding: 0.6rem;
-  margin-top: 1.4rem;
-  align-self: end;
-  transition: all 0.7s;
-  font-size: 1.6rem;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.btn-form:active,
-.btn-form:hover {
-  background-color: var(--narandzasta-input-select);
-  color: var(--font-form);
-}
-
-.btn-footer,
-.btn-footer:link,
-.btn-footer:visited {
-  color: var(--font);
-  background-color: var(--narandzasta-btn);
-  padding: 2rem;
-  font-size: 3rem;
-  transition: all 1s;
-  border-radius: 0 25px 0 25px;
-}
-
-.btn-footer:hover,
-.btn-footer:active {
-  background-color: var(--font);
-  color: var(--narandzasta-btn);
-  transform: scale(1.01);
-}
-
-.btn-close,
-.btn-close:link,
-.btn-close:visited {
-  position: absolute;
-  top: 1rem;
-  right: 4.2rem;
-  font-size: 7rem;
-  color: var(--font);
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.btn-close:hover,
-.btn-close:active {
-  transform: scale(1.2);
-}
-
-.btn-log-out,
-.btn-log-out:link,
-.btn-log-out:visited {
-  position: absolute;
-  top: 2.4rem;
-  right: 2.4rem;
-  display: block;
-  padding: 1.2rem;
-  border-radius: 0 20px;
-  background-color: var(--narandzasta-btn);
-  color: var(--font);
-  font-size: 1.8rem;
-}
-
-.btn-log-out:hover,
-.btn-log-out:active {
-  background-color: var(--font);
-  color: var(--narandzasta-btn);
 }

@@ -4,66 +4,105 @@ body {
   font-family: "Viga", sans-serif;
   font-weight: 400;
   line-height: 1;
+  color: $font;
 }
 
-.heading-hero {
-  font-size: 5.2rem;
-  line-height: 1.3;
-  color: var(--plava-sekundarna);
-  text-shadow: -5px -5px 20px rgba(0, 0, 0, 0.64);
-  align-self: start;
-  font-weight: 700;
+.heading {
+  &--hero {
+    font-size: 5.2rem;
+    line-height: 1.3;
+    color: $blue-secondary;
+    text-shadow: -5px -5px 20px rgba(0, 0, 0, 0.64);
+    align-self: start;
+    font-weight: 700;
+
+    strong {
+      text-transform: uppercase;
+    }
+  }
+
+  &--primary {
+    font-size: 3.6rem;
+    line-height: 1.15;
+  }
+
+  &--secondary {
+    font-size: 2.4rem;
+    color: $blue-primary;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+  }
+
+  &--footer {
+    text-shadow: -5px -5px 20px rgba(0, 0, 0, 0.64);
+    align-self: center;
+    text-align: center;
+    font-size: 3.6rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  &--app {
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: 0.1rem;
+
+    strong {
+      font-size: 3.2rem;
+      color: $font-darker;
+    }
+  }
+
+  &--action {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
-.heading-hero strong {
-  color: var(--font);
-  text-transform: uppercase;
+.feature {
+  &--heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+  &--text {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
 }
 
-.heading-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+.card {
+  &--heading {
+    font-size: 3rem;
+    color: $form-input-select;
+  }
+  &--text {
+    font-size: 2rem;
+    line-height: 1.2;
+    width: 80%;
+    letter-spacing: 0.1rem;
+  }
 }
 
-.heading-secondary {
-  font-size: 2.4rem;
-  color: var(--plava-sekundarni-naslov);
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-}
-
-.heading-primary {
-  font-size: 3.6rem;
-  line-height: 1.15;
-}
-
-.sign-up-heading {
-  font-size: 2.4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  align-self: center;
-  letter-spacing: 0.1rem;
-}
-
-.footer-heading {
-  color: var(--font);
-  text-shadow: -5px -5px 20px rgba(0, 0, 0, 0.64);
-  align-self: center;
-  text-align: center;
-  font-size: 3.6rem;
-  line-height: 1.3;
-  font-weight: 500;
-}
-
-.app-heading {
-  font-size: 3rem;
-  line-height: 1.1;
-  letter-spacing: 0.1rem;
-}
-
-.app-heading strong {
-  font-size: 3.2rem;
-  color: var(--font-tamnija);
+.sign-up {
+  &--text-box {
+    padding: 4rem;
+    color: $form-font;
+    gap: 2.4rem;
+  }
+  &--heading {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: center;
+    letter-spacing: 0.1rem;
+  }
+  &--description {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    strong {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
 }

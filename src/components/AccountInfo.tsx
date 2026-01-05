@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 import { AccountInfoProps } from "../types";
-import { Now } from "../helpers";
+import { clientName, Now } from "../helpers";
 
 function AccountInfo({
   user,
@@ -14,15 +14,6 @@ function AccountInfo({
   const [moneyIn, setMoneyIn] = useState(0);
   const [moneyOut, setMoneyOut] = useState(0);
   let time = useRef("");
-
-  function clientName(fullName: string) {
-    const words = fullName.split(" ");
-    if (words.length > 0) {
-      return words[0];
-    } else {
-      return fullName;
-    }
-  }
 
   useEffect(() => {
     let balance = 0;
@@ -70,29 +61,31 @@ function AccountInfo({
   return (
     <div className="account-info flex-column">
       <div>
-        <h2 className="app-heading">
+        <h2 className="heading--app">
           Zdravo <strong>{clientName(user.username)}</strong>, uživaj koristeći
           naše usluge.
         </h2>
       </div>
 
-      <div className="balance-p">
+      <div className="balance">
         <p>
           Dana <span>{time.current}</span>
         </p>
         <p>
-          Stanje: <strong className="balance">{balance} RSD</strong>
+          Stanje: <strong className="balance--amount">{balance} RSD</strong>
         </p>
       </div>
       <div className="summary">
         <p>
-          Isplaćeno: <strong className="summary-red">{moneyOut} RSD</strong>
+          Isplaćeno:{" "}
+          <strong className="summary--money-out">{moneyOut} RSD</strong>
         </p>
         <p>
-          Uplaćeno: <strong className="summary-green">{moneyIn} RSD</strong>
+          Uplaćeno: <strong className="summary--money-in">{moneyIn} RSD</strong>
         </p>
         <p>
-          Kamata: <strong className="summary-yellow">{interestRate} RSD</strong>
+          Kamata:{" "}
+          <strong className="summary--interest-rate">{interestRate} RSD</strong>
         </p>
       </div>
     </div>

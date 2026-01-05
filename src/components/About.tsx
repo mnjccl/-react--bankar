@@ -56,15 +56,15 @@ export default function About() {
   return (
     <>
       <UpperClouds />
-      <section className="about-section flex-column" id="o-nama">
+      <section className="about flex-column" id="o-nama">
         <div className="heading-wrapper">
-          <h6 className="heading-secondary">O nama</h6>
-          <h1 className="heading-primary">
+          <h6 className="heading--secondary">O nama</h6>
+          <h1 className="heading--primary">
             Koristite naše usluge u bilo koje vrijeme na bilo kojem mjestu.
           </h1>
         </div>
 
-        <div className="about-content">
+        <div className="about--content">
           {aboutCards.map((card, index) => (
             <Card
               key={index}

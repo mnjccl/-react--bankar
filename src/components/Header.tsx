@@ -8,29 +8,29 @@ export default function Header({
   return (
     <header className="header">
       <div className="banner">
-        <img src={logo} alt="Logo kompanije Bankar" className="banner-logo" />
-        <h1 className="banner-text">Bankar</h1>
+        <img src={logo} alt="Logo kompanije Bankar" className="banner--logo" />
+        <h1 className="banner--text">Bankar</h1>
       </div>
       <nav className="nav">
-        <ul className="nav-list">
+        <ul className="nav--list">
           <li>
-            <a href="#o-nama" className="nav-link">
+            <a href="#o-nama" className="nav--link">
               O nama
             </a>
           </li>
           <li>
-            <a href="#features" className="nav-link">
+            <a href="#features" className="nav--link">
               Funkcionalnosti
             </a>
           </li>
           <li>
-            <a href="#otvori-nalog" className="nav-link">
+            <a href="#otvori-nalog" className="nav--link">
               Otvori nalog
             </a>
           </li>
           <li>
             <button
-              className="btn nav-link-btn"
+              className="btn btn--nav-link"
               onClick={() => setIsOpenOverlay(true)}
             >
               Uloguj se

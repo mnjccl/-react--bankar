@@ -1,62 +1,59 @@
 .nav {
   display: flex;
   align-items: center;
-}
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 3.6rem;
-}
+  &--list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+  }
 
-.nav-link:link,
-.nav-link:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--font);
-  font-size: 1.6rem;
-  transition: all 0.4s;
-}
+  &,
+  &--link:link,
+  &--link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $font;
+    font-size: 1.6rem;
+    transition: all 0.4s;
+  }
 
-.nav-link:active,
-.nav-link:hover {
-  transform: scale(1.1);
-  color: var(--narandzasta-btn);
+  &--link:active,
+  &--link:hover {
+    transform: scale(1.1);
+    color: $btn-primary;
+  }
 }
 
 // FOOTER NAVIGATION
-.nav-footer {
+.footer--nav {
   align-self: center;
-}
 
-.nav-links-footer {
-  display: flex;
-  gap: 5.6rem;
-  list-style: none;
-  align-items: center;
-}
+  &-list {
+    display: flex;
+    gap: 5.6rem;
+    list-style: none;
+    align-items: center;
 
-.nav-link-footer:link,
-.nav-link-footer:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--font);
-  font-size: 2.4rem;
-  transition: all 0.7s;
-}
+    li span {
+      font-size: 2.4rem;
+      cursor: pointer;
+    }
+  }
 
-.nav-link-footer:active,
-.nav-link-footer:hover {
-  color: var(--narandzasta-btn);
-}
+  &,
+  &-link:link,
+  &-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $font;
+    font-size: 2.4rem;
+    transition: all 0.7s;
+  }
 
-li span {
-  font-size: 2.4rem;
-  cursor: pointer;
-}
-
-.footer-container .banner {
-  align-self: center;
-  cursor: pointer;
+  &-link:active,
+  &-link:hover {
+    color: $btn-primary;
+  }
 }

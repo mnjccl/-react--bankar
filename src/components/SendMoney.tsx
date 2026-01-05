@@ -68,7 +68,7 @@ export default function SendMoney({
 
   return (
     <>
-      <h3 className="action-heading">Pošalji novac prijatelju</h3>
+      <h3 className="heading--action">Pošalji novac prijatelju</h3>
       <form className="action-form flex-column" onSubmit={handleSubmit}>
         <div className="flex-column">
           <label htmlFor="korisnik">E-mail korisnika</label>
@@ -88,7 +88,7 @@ export default function SendMoney({
             onChange={(e) => setAmount(Number(e.target.value))}
           />
         </div>
-        <button type="submit" className="btn btn-action">
+        <button type="submit" className="btn btn--action">
           Pošalji
         </button>
       </form>
