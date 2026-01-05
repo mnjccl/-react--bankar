@@ -1,3 +1,5 @@
+@use "../index" as *;
+
 .account-reports {
   grid-row: 1/3;
   grid-column: 2/3;

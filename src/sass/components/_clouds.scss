@@ -1,3 +1,5 @@
+@use "../index" as *;
+
 .svg-wrapper {
   position: relative;
 }
@@ -19,7 +21,7 @@
     }
 
     .shape-fill {
-      fill: var(--font);
+      fill: $font;
     }
   }
 

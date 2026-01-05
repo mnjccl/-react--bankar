@@ -1,0 +1,28 @@
+@use "index" as g;
+
+@use "base/base";
+@use "base/typography";
+@use "base/utilities";
+
+@use "components/btn";
+@use "components/clouds";
+@use "components/input";
+@use "components/label";
+@use "components/overlay";
+@use "components/scroll-bar";
+
+@use "layout/account-actions";
+@use "layout/account-info";
+@use "layout/account-reports";
+@use "layout/card";
+@use "layout/feature";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/nav";
+
+@use "pages/about";
+@use "pages/bankar";
+@use "pages/features";
+@use "pages/hero";
+@use "pages/login";
+@use "pages/signup";

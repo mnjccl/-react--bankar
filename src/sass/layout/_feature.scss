@@ -1,3 +1,5 @@
+@use "../index" as *;
+
 .feature {
   background-color: $form-input-select;
   color: $form-font;
