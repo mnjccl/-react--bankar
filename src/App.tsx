@@ -4,7 +4,7 @@ import { User } from "./types";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Features from "./components/Features";
-import SignUp from "./components/SighUp";
+import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
 import Overlay from "./components/Overlay";
 import LogIn from "./components/LogIn";

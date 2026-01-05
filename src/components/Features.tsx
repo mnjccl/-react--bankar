@@ -1,19 +1,25 @@
+import {
+  cloudDownloadOutline,
+  personRemoveOutline,
+  sendOutline,
+} from "ionicons/icons";
+
 import { LowerClouds } from "./Clouds";
 import Feature from "./Feature";
 
 const data = [
   {
-    icon: "send-outline",
+    icon: sendOutline,
     heading: "Pošalji novac",
     text: "Želiš da pošalješ novac prijatelju? Nema problema, posluži se bankomatom koji je u tvom telefonu, čak i vikendom.",
   },
   {
-    icon: "cloud-download-outline",
+    icon: cloudDownloadOutline,
     heading: "Digni pozajmicu",
     text: "Potreban ti je novac odmah? Nema problema, uloguj se i digni pozajmicu uz kamatnu stopu od samo 1.1%.",
   },
   {
-    icon: "person-remove-outline",
+    icon: personRemoveOutline,
     heading: "Obriši nalog",
     text: "Želiš da obrišeš nalog? Nema problema, mi poslujemo bez ugovornih obaveza, samo pazi da tvoj račun nije u deficitu.",
   },
