@@ -7,22 +7,22 @@ const aboutCards = [
   {
     img: "digital-bank-img",
     heading: "24/7 dostupnost",
-    text: "Upravljaj svojim finansijama online, bez čekanja i redova.",
+    text: "Nema više čekanja u dugim redovima ispred banke. Otvori račun u Bankar aplikaciji i upravljaj svojim finansijama od kuće.",
   },
   {
     img: "security-img",
     heading: "Sigurnost",
-    text: "Tvoj nalog je zaštićen uz pomoć našeg stručnog tima.",
+    text: "Svakim danom naša zajedica postaje sve veća i veća. Zato je za vašu sigurnost zadužen poseban tim stručnjaka koji brinu o vama.",
   },
   {
     img: "debit-card-img",
     heading: "Kreditna kartica",
-    text: "Kartica za lako i sigurno plaćanje bez gotovine.",
+    text: "Nema potrebe da gomilate novac u vašim džepovima kada sve to može da zamijeni jedna kartica koju dobijate nakon što postanete naš član.",
   },
   {
     img: "e-mail-img",
     heading: "E-mail obavještenja",
-    text: "Dobijaš potvrde o svakoj transakciji putem e-maila.",
+    text: "Kako bi bili 100% sigurni da samo vi upravljate vašim nalogom dobijaćete potvrde o transakcijama u obliku e-maila.",
   },
 ];
 

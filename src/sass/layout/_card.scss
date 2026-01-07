@@ -23,6 +23,7 @@
   &--description {
     padding: 3.2rem;
     gap: 1.6rem;
+    transform: translateY(85%);
     transition: all 0.7s ease-out;
   }
 
@@ -32,9 +33,9 @@
     }
   }
 
-  &-link,
-  &-link:link,
-  &-link:visited {
+  &--link,
+  &--link:link,
+  &--link:visited {
     align-self: start;
     color: $form-input-select;
     text-decoration: none;
@@ -43,9 +44,9 @@
     cursor: pointer;
   }
 
-  &-link,
-  &-link:hover,
-  &-link:active {
+  &--link,
+  &--link:hover,
+  &--link:active {
     color: $font;
   }
 }
@@ -59,20 +60,21 @@
 
 .digital-bank-img {
   @extend %card-bg;
-  background-image: $card-gradient url("components/imgs/digital-bank.jpg");
+  background-image: $card-gradient,
+    url("../../components/imgs/digital-bank.jpg");
 }
 
 .security-img {
   @extend %card-bg;
-  background-image: $card-gradient, url("components/imgs/security.jpg");
+  background-image: $card-gradient, url("../../components/imgs/security.jpg");
 }
 
 .debit-card-img {
   @extend %card-bg;
-  background-image: $card-gradient, url("components/imgs/debit-card.jpg");
+  background-image: $card-gradient, url("../../components/imgs/debit-card.jpg");
 }
 
 .e-mail-img {
   @extend %card-bg;
-  background-image: $card-gradient, url("components/imgs/e-mail.jpg");
+  background-image: $card-gradient, url("../../components/imgs/e-mail.jpg");
 }

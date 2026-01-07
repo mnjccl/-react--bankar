@@ -1,9 +1,6 @@
 @use "../index" as *;
 
 .nav {
-  display: flex;
-  align-items: center;
-
   &--list {
     list-style: none;
     display: flex;

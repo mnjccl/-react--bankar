@@ -39,7 +39,7 @@ export default function Hero({
           <img src={hero} alt="Mobile banking" className="hero-img" />
         </div>
         <div className="users-wrapper">
-          <div className="users-images">
+          <div className="users">
             <img src={user1} alt="Slika korisnika" />
             <img src={user2} alt="Slika korisnika" />
             <img src={user3} alt="Slika korisnika" />

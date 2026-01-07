@@ -13,54 +13,54 @@
     overflow: hidden;
     align-self: center;
     margin: 3rem 9.8rem 3.6rem;
+  }
 
-    &--form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 3.2rem;
-      row-gap: 1.2rem;
+  &--form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 1.2rem;
 
-      *:focus {
-        outline: none;
-        box-shadow: 0 0 0 0.4rem rgba(226, 120, 0, 0.5);
-        border-radius: 0 20px 0 20px;
-      }
-
-      label {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 500;
-        margin-bottom: 0.6rem;
-      }
-
-      input,
-      select {
-        width: 100%;
-        padding: 0.6rem;
-        border-radius: 0 20px;
-        border: none;
-        font-family: inherit;
-        color: inherit;
-        font-size: 1.6rem;
-        background-color: $form-input-select;
-        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-        -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-      }
-      input::placeholder {
-        color: $form-btn;
-      }
+    *:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.4rem rgba(226, 120, 0, 0.5);
+      border-radius: 0 20px 0 20px;
     }
 
-    &--img {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba(252, 158, 51, 0.35),
-          rgba(251, 134, 0, 0.35)
-        ),
-        url("components/imgs/sign-up-img.jpg");
-      background-size: cover;
-      background-position: center;
+    label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
     }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 0 20px;
+      border: none;
+      font-family: inherit;
+      color: inherit;
+      font-size: 1.6rem;
+      background-color: $form-input-select;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    }
+    input::placeholder {
+      color: $form-btn;
+    }
+  }
+
+  &--img {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(252, 158, 51, 0.35),
+        rgba(251, 134, 0, 0.35)
+      ),
+      url("../../components/imgs/sign-up-img.jpg");
+    background-size: cover;
+    background-position: center;
   }
 }
